@@ -1,0 +1,4 @@
+*.tpl.php
+
+temp/cache/*
+temp/tpl_c/*
