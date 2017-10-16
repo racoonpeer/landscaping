@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Candara';
+    src: url('/fonts/candara/Candara.eot');
+    src: url('/fonts/candara/Candara.woff2') format('woff2'),
+         url('/fonts/candara/Candara.woff') format('woff'),
+         url('/fonts/candara/Candara.ttf') format('truetype'),
+         url('/fonts/candara/Candara.svg#Candara') format('svg'),
+         url('/fonts/candara/Candara.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Candara';
+    src: url('/fonts/candara/Candara-Bold.eot');
+    src: url('/fonts/candara/Candara-Bold.woff') format('woff'),
+         url('/fonts/candara/Candara-Bold.ttf') format('truetype'),
+         url('/fonts/candara/Candara-Bold.svg#Candara') format('svg'),
+         url('/fonts/candara/Candara-Bold.eot?#iefix') format('embedded-opentype');
+    font-weight: 700;
+    font-style: normal;
+}

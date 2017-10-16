@@ -1,0 +1,42 @@
+.highslide-html {
+    border: 1px solid #707071;
+}
+.highslide-dimming {
+    background: #c1cce1;
+}
+
+.draggable-header .highslide-header .highslide-close a {
+    background-image: url(graphics_custom/closeX.png);
+    display: block;
+    height: 14px;
+    width: 16px;
+}
+.draggable-header .highslide-header .highslide-close a:hover {
+    background-position:0 14px;
+}
+
+/*линия пот title*/
+.draggable-header .highslide-header {
+    border-bottom: 1px solid #D0DBE0;
+    height:40px;
+}
+
+/*Цвет title*/
+.draggable-header .highslide-heading {
+    color: #003a7d;
+    font-size:18px;
+    font-family: Arial;
+    font-weight:normal;
+    margin: 22px 0 0 15px;
+    position: absolute;
+}
+
+.draggable-header .highslide-header .highslide-close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.highslide-wrapper .highslide-footer .highslide-resize {
+    display: none; /* ------------disable resize------------ */
+} 

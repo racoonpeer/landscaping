@@ -1,0 +1,18 @@
+.ui-datepicker-trigger {
+    position:absolute;
+    top:0px;
+    margin-left:9px;
+}
+#ui-datepicker-div {
+    margin-left:-6px;
+}
+.ui-datepicker {
+    margin-top: 8px;
+    z-index: 100 !important;
+}
+#page-content .request-edit-table ul {
+    padding-left:0;
+}
+#page-content .request-edit-table ul, #page-content .request-edit-table li {
+    list-style:none outside none;
+}

@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Candara';
+  src: url('Candara.eot');
+  src: url('Candara.woff2') format('woff2'),
+       url('Candara.woff') format('woff'),
+       url('Candara.ttf') format('truetype'),
+       url('Candara.svg#Candara') format('svg'),
+       url('Candara.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

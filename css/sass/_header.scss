@@ -1,0 +1,99 @@
+/*header*/
+$sprite:url(/images/sprite.png);
+header{
+    height: 93px; 
+    position:relative;
+    .logo{
+        width:397px;
+        height: 70px;
+        background-image: url("/images/logo.png");
+        position: absolute;
+        top:17px;
+        left: 0;
+    }
+    .main-nav{
+        position: absolute;
+        top:40px; 
+        left: 545px;
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li {
+                font-size: 24px;
+                text-transform: uppercase;
+                display:inline-block;
+                margin-right:32px;
+                &.active{
+                    color:rgb(62,139,43);
+                    a {
+                        color: inherit;
+                    }
+                }
+                a {
+                    color:rgb(0,0,0);
+                    &:hover{
+                        color:rgb(62,139,43);
+                    }
+                }
+            }
+        }
+    }
+}
+.soc{
+    position: absolute;
+    top:34px;
+    right: 0;
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li{
+            display: inline-block;
+        }
+    }
+    button,
+    li, 
+    a {
+        border:none;
+        background-color:transparent;
+        vertical-align:middle;
+        line-height: 0;
+        display: inline-block;
+        &.fb{
+            width: 31px;
+            height: 30px;
+            background-image: $sprite;
+            background-position: -34px 0px;
+            margin-left: 10px;
+            @include transition(0.3s);
+            &:hover{
+                @include filter(opacity(0.8));
+                @include transform(rotate(10deg));
+
+            }
+        }
+        &.inst{
+            @extend .fb;
+            background-position: 0px 0px; 
+            margin-left: 6px;
+        }
+        &.language{
+            padding:0;
+            margin-left: 6px;
+            font-size: 18px;
+            a {
+                color: rgb(79,79,79);
+                font-size: 18px;
+            }
+            &:hover{
+                a{
+                    color:rgb(62,139,43);    
+                }
+            }
+            &.active{
+                color:rgb(62,139,43);  
+            }
+        }
+    }
+}

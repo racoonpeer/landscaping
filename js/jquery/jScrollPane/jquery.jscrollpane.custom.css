@@ -1,0 +1,19 @@
+/*
+ * CSS Styles that are needed by jScrollPane for it to operate correctly.
+ *
+ */
+.jspVerticalBar {background-color: transparent;}
+.jspTrack { background-color: #110505; }
+.jspDrag { background: url(images/drag.png) no-repeat scroll bottom center #321a1a;}
+.jspDragTop {height:1px; background-color: #321a1a; }
+.jspVerticalBar .jspArrow { height: 15px; }
+ 
+.jspArrow.jspArrowUp {background: url(images/up.png) no-repeat scroll left top transparent;}
+.jspArrow.jspArrowUp:hover {background: url(images/up.png) no-repeat scroll left center transparent;}
+.jspArrow.jspArrowUp.jspDisabled {background: url(images/up.png) no-repeat scroll left bottom transparent;}
+
+.jspArrow.jspArrowDown { background: url(images/down.png) no-repeat scroll left top transparent; }
+.jspArrow.jspArrowDown:hover { background: url(images/down.png) no-repeat scroll left center transparent; }
+.jspArrow.jspArrowDown.jspDisabled{ background: url(images/down.png) no-repeat scroll left bottom transparent; }
+
+

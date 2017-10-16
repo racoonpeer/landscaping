@@ -1,0 +1,181 @@
+<!--
+/* Video Catalog */
+.highslide-video{ padding-bottom:5px; }
+.videoitem{
+    float:left;
+    height:auto;/*155px*/
+    width:458px;
+    margin-right: 8px;
+    margin-top: 10px;
+    overflow:hidden;
+}
+.videoitem div{ padding: 2px;}
+.videoitem .videoimg{
+    height:220px;
+    width:458px;
+    padding:0;
+    text-align:center;
+    overflow:hidden;
+}
+.videoitem .videoimg a{
+    text-decoration: none;
+    color:#FFFFFF;
+    display:block;
+    height:220px;
+    width:458px;
+    overflow:hidden;
+}
+.videoitem .videoimg img{
+    border:0;
+}
+.videoitem .videotitle{
+    text-align:left;
+    padding-bottom:0;
+    height: 20px;
+    overflow:hidden;
+}
+.videoitem .videotitle a{
+    color:#FFFFFF;
+    text-decoration:none;
+}
+.videoitem .videotitle a:hover{
+    text-decoration:underline;
+}
+.videoitem .videocat{
+    color:#00355D;
+    font-weight:bold;
+    padding-bottom:0;
+    display: none;/**/
+}
+.videoitem .videoinfo{
+    color:#78a2bb;
+    padding-bottom:0;
+}
+.highslide-video .videoitem,
+.highslide-video .videoimg,
+.highslide-video .videoimg a{
+    width:430px;
+}
+.highslide-video .videoimg,
+.highslide-video .videoimg a{
+    height: 207px;
+}
+.highslide-video .videoimg img{
+    width:430px;
+    height: 207px;
+}
+.highslide-video .go_to_box{
+    clear:both;
+    float:none;
+    border-bottom:1px solid #12456b;
+    background-color:#357aae;
+    padding-bottom:1px;
+}
+.highslide-video .go_to_box .go_to_text{
+    color:#FFFFFF;
+    background-color:#3f7d9f;
+    line-height:13px;
+    font-size: 12px;
+    height: 16px;
+    padding-top:4px;
+    padding-left:8px;
+}
+.highslide-video .go_to_box .go_to_text a{
+    color:#FFFFFF;
+    text-decoration:none;
+}
+.highslide-video .go_to_box .go_to_text a:hover{
+    text-decoration:underline;
+}
+
+
+/* Video Catalog EOF */
+
+
+/* HighSlide changes for Video Catalog */
+.highslide-html-content {
+	padding:0px;
+}
+.highslide-header {
+    padding-top:2px;
+    padding-bottom:4px;
+}
+.highslide-header ul li {
+	padding-right:0.3em;
+}
+.highslide-header a {
+	color: #ffffff;
+	font-weight: normal;
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+	text-transform:none;
+}
+
+.highslide-header a:hover {
+	color: #ffffff;
+	text-decoration:underline;
+}
+.highslide-video .highslide img {
+	border: 0;
+        cursor: pointer !important;
+}
+.highslide-video .highslide:hover img {
+	border-color:transparent;
+}
+/* HighSlide changes for Video Catalog EOF */
+
+
+/*****************************************************************************/
+/* The following styles are added by the Highslide Editor                    */
+/*****************************************************************************/
+.highslide-wrapper, .highslide-outline {
+	background-color: #191919;
+}
+.highslide-active-anchor img {
+	visibility: visible;
+	border-color: #191919 !important;
+}
+.highslide-dimming {
+	background: #000000;
+}
+.highslide-image {
+	border: 2px solid #191919;
+}/*
+.highslide-caption {
+	color: #FFFFFF;
+	padding: 5px;
+	border-width: 0px;
+	border-right-width: 2px;
+	border-bottom-width: 2px;
+	border-left-width: 2px;
+	border-color: #191919;
+	border-style: solid;
+}*/
+.highslide-loading {
+	display: block;
+	padding: 3px 0 3px 38px;
+	width: 0;
+	height: 32px;
+	overflow: hidden;
+	background-color: black;
+	background-repeat: no-repeat;
+	background-position: 3px 3px;
+	background-image: url(highslide/graphics/loader.big.black.gif);
+}
+
+.highslide-html {
+	background: none;
+}
+.highslide-header .highslide-move {
+	display: none;
+}
+.highslide-footer {
+	display: none;
+}
+.titlebar .highslide-heading {
+	width: 80%;
+	margin: 1px 0 1px 5px;
+	color: #FFFFFF;
+}
+
+-->

@@ -1,0 +1,1 @@
+<{* REQUIRE VARS: $arCategory=array() $arItem=array() [$params=mixed array or string] *}><{if !isset($params)}><{assign var='params' value=''}><{/if}><{$UrlWL->buildItemUrl($arCategory, $arItem, $params)}>

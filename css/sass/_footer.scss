@@ -1,0 +1,88 @@
+.footer-box{
+    background-color: rgb(202,202,202);
+    position:relative;
+    &:before{
+        content: "";
+        position: absolute;
+        top:3px;
+        right:0;
+        left:0;
+        height: 2px;
+        background-color: rgb(255,255,255);
+    }
+    footer{
+        height: 94px;
+        .left-section{
+            display: inline-block;
+            vertical-align: top;
+            padding-top:23px;
+            .footer-nav {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                li{
+                    display: inline-block;
+                    font-size:20px;
+                    text-transform: uppercase;
+                    margin-right:50px;
+                    &:last-of-type{
+                        margin-right:0;
+                    }
+                    a{
+                        color:rgb(75,75,75);
+                        &:hover{
+                            color:rgb(62,139,43);
+                        }
+                    }
+                }
+            }
+            .copyrighted {
+                font-size: 12px;
+                text-transform: uppercase;
+                color:rgb(62,139,43);
+                padding-top: 13px;
+                margin: 0;
+            }
+        }
+        .midlle-section {
+            display: inline-block;
+            vertical-align: top;
+            padding-top:15px;
+            padding-left:70px;
+            .soc {
+                position: static;
+                .fb {
+                    background-position: -104px 0px;
+                }
+                .inst {
+                     background-position: -70px 0px !important  ;
+                }
+            }
+        }
+        .right-section {
+            float: right;
+            vertical-align: top;
+            padding-top:24px;
+            p {
+                margin: 0;
+                font-size: 17px;
+                text-transform: uppercase;
+                color: rgb(89,88,88);
+                padding-bottom:7px;
+                span,
+                a {
+                    color:rgb(34,127,40);
+                }
+                a {
+                    border-bottom: 1px solid rgba(34,127,40, 0.2);
+                    line-height: 17px;
+                    display: inline-block;
+                    &:hover{
+                        color:rgb(193,8,26);
+                        border-color: rgb(193,8,26);
+                    }
+                }
+            }
+        }
+    }
+}

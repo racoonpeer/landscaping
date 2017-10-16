@@ -1,0 +1,164 @@
+@import "ext/slick";
+@import "ext/swiper";
+
+/*main-slider*/
+.main-slider-slick,
+.page-slider-slick{
+    position: relative;
+    margin-top: 39px;
+    .single-item, 
+    .single-item-2 {
+        .slider-element {
+            img{ 
+                width: 100% !important;
+                float: left !important;
+            }
+        }
+        .slick-dots{
+            position: absolute;
+            bottom: 70px;
+            right:1%;
+            z-index:2;
+            li{
+                float: left;
+                border: 2px solid rgb(251,251,251);
+                width:14px;
+                height:14px;
+                margin-left: 18px;
+                @include border-radius(8px);
+                @include box-shadow(1px 1px 4px 0 rgba(0,0,0,0.32));
+                &.slick-active{
+                   background-color: rgb(251,251,251);
+                }
+                button{
+                    @include filter(opacity(0));
+                }
+            }
+        }
+        .slick-prev,
+        .slick-next{
+            display: none !important;
+        }
+    }
+    .single-item-2 {
+        .slick-dots {
+            left: 0;
+            right: 0;
+            bottom: auto !important;
+            top: 20px;
+            margin: 0;
+            padding-right: 20px;
+            text-align: right;
+            li {
+                float: none;
+                margin-left: 12px;
+            }
+        }
+    }
+    .bottom-row-title{
+        z-index: 0;
+        position: absolute;
+        bottom:73px;
+        left: 0;
+        right: 0;
+        height: 42px;
+        background: white;
+        background: linear-gradient(45deg, #fefefe -30%, rgba(254, 254, 254, 0) 85%);
+        -moz-background: linear-gradient(45deg, #fefefe -30%, rgba(254, 254, 254, 0) 85%);
+        -webkit-background: linear-gradient(45deg, #fefefe -30%, rgba(254, 254, 254, 0) 85%);
+        -o-background: linear-gradient(45deg, #fefefe -30%, rgba(254, 254, 254, 0) 85%);
+        -ms-background: linear-gradient(45deg, #fefefe -30%, rgba(254, 254, 254, 0) 85%);
+        p {
+            font-size:26px;
+            text-transform: uppercase;
+            color: rgb(12,11,11);
+            display: inline-block;
+            vertical-align: midlle;
+            line-height: 44px;
+            span{
+                font-size:23px;
+                font-family:'Cardana', sans-serif;
+            }
+        }
+    }
+} 
+
+.homeslider {
+    overflow: hidden;
+    position: absolute;
+    top: 93px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    .swiper-wrapper {
+        .swiper-slide {
+            position: relative;
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 40px;
+            padding-right: 40px;
+            text-align: center;
+            .trigger {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 0;
+            }
+            .line {
+                text-align: left;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 40px;
+                padding-left: 45px;
+                padding-right: 45px;
+                line-height: 45px;
+                height: 45px;
+                background: white;
+                background: linear-gradient(45deg, #fefefe -30%, rgba(254, 254, 254, 0) 85%);
+                -moz-background: linear-gradient(45deg, #fefefe -30%, rgba(254, 254, 254, 0) 85%);
+                -webkit-background: linear-gradient(45deg, #fefefe -30%, rgba(254, 254, 254, 0) 85%);
+                -o-background: linear-gradient(45deg, #fefefe -30%, rgba(254, 254, 254, 0) 85%);
+                -ms-background: linear-gradient(45deg, #fefefe -30%, rgba(254, 254, 254, 0) 85%);
+                font-size:26px;
+                text-transform: uppercase;
+                color: rgb(12, 11, 11);
+                z-index: 1;
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                    &:hover {
+                        color: rgb(64, 64, 64);
+                    }
+                }
+            }
+        }
+    }
+    .swiper-pagination {
+        bottom: 50px;
+        left: auto;
+        right: 40px;
+        text-align: right;
+        .swiper-pagination-bullet {
+            width: 14px;
+            height: 14px;
+            margin-left: 14px;
+            margin-right: 0;
+            display: inline-block;
+            border-radius: 100%;
+            background: #000000;
+            opacity: 1;
+            border: 2px solid #fbfbfb;
+            &.swiper-pagination-bullet-active {
+                background-color: #fbfbfb;
+            }
+        }
+    }
+}

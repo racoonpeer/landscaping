@@ -1,0 +1,11 @@
+.jNice{font-size:12px !important; font-family:Tahoma, Arial, Helvetica, sans-serif !important;}
+.jNiceWrapper {position: relative;}
+.jNiceSelectWrapper {position: absolute; color:#808285; font-size:12px; height: 25px !important; padding:0px 0px 8px 5px; line-height:25px;  width: 143px !important; cursor:pointer; background:url(./images/jNiceSelect.png) no-repeat 0px -1px; }
+.jNiceSelectWrapper.open {background:url(./images/jNiceSelect.png) no-repeat -148px -1px;}
+.jNiceSelectWrapper ul, .jNiceSelectWrapper li{ margin:0; padding:0; }
+.jNiceSelectWrapper ul{margin: 2px 0 0 -5px; }
+.jNiceSelectWrapper li{list-style: none; height:14px;}
+.jNiceSelectWrapper li a{ display: block;float: left; width: 143px; padding: 0px 0px 0px 5px; color: #808285; text-decoration: none; background:url(./images/jNiceSelect.png) no-repeat -296px -1px;}
+.jNiceSelectWrapper li a:hover{text-decoration: none;}
+.jNiceSelectWrapper li a.last{padding: 1px 0px 4px 5px;height:27px;background:url(./images/jNiceSelect.png) no-repeat -444px 0px;}
+.jNiceSelectWrapper li a.selected {text-decoration: none; color:#000000 !important}

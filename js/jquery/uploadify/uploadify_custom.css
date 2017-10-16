@@ -1,0 +1,41 @@
+#upload_box{
+    padding:5px;
+}
+#upload_box fieldset{
+    border: 1px solid #CDCDCD; 
+    padding: 8px; 
+    padding-bottom:0px; 
+    margin: 8px 0;
+}
+#upload_box fieldset legend{
+    font-weight: bold;
+    margin-left: 10px;
+}
+#upload_links_box, #userFileUploader{
+    text-align:center;
+}
+
+#upload_box .uploadifyQueue{
+    background-color: white;
+    border: 1px solid #CECECE;
+    height: 277px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    overflow: auto;
+    padding: 3px;
+    width: 350px;
+}
+#upload_box .uploadifyQueueItem {
+    width: auto;
+}
+
+#upload_box .uploadifyQueueItem .itemExists{
+    color: red;
+}
+
+#upload_box .fileUploadProgress {
+    border-top: 1px solid #808080;
+    border-left: 1px solid #808080;
+    border-right: 1px solid #C5C5C5;
+    border-bottom: 1px solid #C5C5C5;
+}
