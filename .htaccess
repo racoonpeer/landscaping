@@ -1,0 +1,124 @@
+##### Set PHP.ini value to on ##################################################
+# php_value magic_quotes_gpc 1
+# php_value display_errors 1
+# php_value error_reporting 7
+
+
+##### Additional configuration #################################################
+DirectoryIndex index.php index.html
+# AddDefaultCharset UTF-8
+AddDefaultCharset WINDOWS-1251
+
+AddType application/x-javascript .js
+AddType text/css .css
+AddType text/xml .xml
+AddType application/octet-stream .doc .mov .avi .xls
+AddType application/pdf .pdf
+
+##### Rewrite Rules ############################################################
+<IfModule mod_rewrite.c>
+    Options +FollowSymLinks
+
+    RewriteEngine On
+
+    #RewriteBase /
+	
+	RewriteRule ^contacts/ /feedback/ [R=301,L]
+	RewriteRule ^about-us/ /o_nas/ [R=301,L]
+	RewriteRule ^pezzo-di-paradiso/ /galereya/realizovannie/villa_pezzo_di_paradiso/ [R=301,L]
+	RewriteRule ^pod-kronami-sosen/ /galereya/realizovannie/pod_konami_sosen/ [R=301,L]
+	RewriteRule ^sosny-na-prigorke/ /galereya/realizovannie/sosni_na_pigoke/ [R=301,L]
+	RewriteRule ^begushhaya-volna/ /galereya/na_stadii_poektiovaniya/beguschaya_volna/ [R=301,L]
+	RewriteRule ^na-volne-2013-2014-gg/ /galereya/realizovannie/na_volne/ [R=301,L]
+	RewriteRule ^project-1/ /galereya/realizovannie/v_garmonii_s_prirodoy/ [R=301,L]
+	RewriteRule ^statyi-i-publikaciyi/ /novosti/ [R=301,L]
+	
+	RewriteCond %{REQUEST_URI} !\?
+	RewriteCond %{REQUEST_URI} !\&
+	RewriteCond %{REQUEST_URI} !\=
+	RewriteCond %{REQUEST_URI} !\.
+	RewriteCond %{REQUEST_URI} !\/$
+	RewriteRule ^(.*[^\/])$ /$1/ [R=301,L]
+	
+    RewriteCond %{HTTP_HOST} ^www\.landscaping\.kiev\.ua$ [NC]
+    RewriteRule ^(.*)$ http://landscaping.kiev.ua/$1 [R=301,L]
+
+    RewriteCond %{REQUEST_URI} ^/([ruaen]{2})$ [NC]
+    RewriteRule ^(.*)$ http://%{HTTP_HOST}/$1/ [R=301,L]
+
+    #RewriteRule ^index\.php$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule . index.php [L]
+
+    ErrorDocument  400  /
+    ErrorDocument  401  /
+    ErrorDocument  403  /
+    ErrorDocument  404  /
+    ErrorDocument  500  /
+
+</IfModule>
+
+<ifModule mod_deflate.c>
+    <IfModule mod_filter.c>
+        AddOutputFilterByType DEFLATE text/plain text/html application/x-httpd-php
+        AddOutputFilterByType DEFLATE text/css
+        AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript
+        AddOutputFilterByType DEFLATE text/xml application/xml application/xhtml+xml application/rss+xml
+        AddOutputFilterByType DEFLATE application/json
+        AddOutputFilterByType DEFLATE application/vnd.ms-fontobject application/x-font-ttf font/opentype image/svg+xml image/x-icon
+    </ifModule>
+</ifModule>
+
+<ifModule mod_headers.c>
+    Header set Cache-Control "max-age=86400, must-revalidate"
+    #кэшировать html и htm файлы на один день
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "max-age=86400, must-revalidate"
+    </FilesMatch>
+    #кэшировать css, javascript и текстовые файлы на одну неделю
+    <FilesMatch "\.(js|css|txt)$">
+        Header set Cache-Control "max-age=604800, must-revalidate"
+    </FilesMatch>
+    #кэшировать флэш и изображени¤ на мес¤ц
+    <FilesMatch "\.(flv|swf|ico|gif|jpg|jpeg|png)$">
+        Header set Cache-Control "max-age=604800, must-revalidate"
+    </FilesMatch>
+    #отключить кэширование
+    <FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
+        Header unset Cache-Control
+    </FilesMatch>
+    Header append Vary: User-Agent
+    Header unset ETag
+</IfModule>
+
+<ifModule mod_expires.c>
+    ExpiresActive On
+    #по умолчанию кеш в 1 день
+    ExpiresDefault "access plus 43200 seconds"
+    #кэшировать флэш и изображени¤ на мес¤ц
+    ExpiresByType image/x-icon "access plus 2592000 seconds"
+    ExpiresByType image/jpeg "access plus 2592000 seconds"
+    ExpiresByType image/png "access plus 2592000 seconds"
+    ExpiresByType image/gif "access plus 2592000 seconds"
+    ExpiresByType application/x-shockwave-flash "access plus 2592000 seconds"
+    #кэшировать css, javascript и текстовые файлы на одну неделю
+    ExpiresByType text/css "access plus 604800 seconds"
+    ExpiresByType text/javascript "access plus 604800 seconds"
+    ExpiresByType application/javascript "access plus 604800 seconds"
+    ExpiresByType application/x-javascript "access plus 604800 seconds"
+    #кэшировать html и htm файлы на один день
+    ExpiresByType text/html "access plus 43200 seconds"
+    #кэшировать xml файлы на дес¤ть минут
+    ExpiresByType application/xhtml+xml "access plus 600 seconds"
+</ifModule>
+
+<IfModule mod_gzip.c>
+    mod_gzip_on         Yes
+    mod_gzip_dechunk    Yes
+    mod_gzip_item_include file		\.(html?|txt|css|js|php|pl)$
+    mod_gzip_item_include mime		^text\.*
+    mod_gzip_item_include mime		^application/x-javascript.*
+    mod_gzip_item_exclude mime		^image\.*
+    mod_gzip_item_exclude rspheader	^Content-Encoding:.*gzip.*
+</IfModule>
