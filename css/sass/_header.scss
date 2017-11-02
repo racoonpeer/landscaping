@@ -14,16 +14,20 @@ header{
     .main-nav{
         position: absolute;
         top:40px; 
-        left: 545px;
+        left: 450px;
+        right: 200px;
         ul {
+            font-size: 22px;
             list-style: none;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: nowrap;
             li {
-                font-size: 24px;
                 text-transform: uppercase;
                 display:inline-block;
-                margin-right:32px;
                 &.active{
                     color:rgb(62,139,43);
                     a {
@@ -32,7 +36,7 @@ header{
                 }
                 a {
                     color:rgb(0,0,0);
-                    &:hover{
+                    &:hover {
                         color:rgb(62,139,43);
                     }
                 }
